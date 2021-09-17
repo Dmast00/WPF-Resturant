@@ -28,7 +28,7 @@ namespace WPF_Restaurant.Views
         {
             DbConnection dbcon = new DbConnection();
 
-            
+            dbcon.Crear_Categoria();
         }
     }
 }
