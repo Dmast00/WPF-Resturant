@@ -9,6 +9,33 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-
+        <DockPanel>
+            <Menu DockPanel.Dock="Top">
+                <MenuItem Header="Sistema">
+                    <MenuItem Header="Restaurante">
+                        <MenuItem Header="Restaurante"/>
+                    </MenuItem>
+                    <MenuItem Header="Inicar Sesion"/>
+                    <MenuItem Header="Salir"/>
+                </MenuItem>
+                <MenuItem Header="Catalogos">
+                    <MenuItem Header="Categorias">
+                        <MenuItem Header="Crear Categoria" Click="mnu_crear_categoria"/>
+                        <MenuItem Header="Editar Categoria"/>
+                        <MenuItem Header="Eliminar Categoria"/>
+                    </MenuItem>
+                    <MenuItem Header="Areas">
+                        <MenuItem Header="Cear Area"/>
+                        <MenuItem Header="Editar Area"/>
+                        <MenuItem Header="Eliminar Area"/>
+                    </MenuItem>
+                    <MenuItem Header="Mesas">
+                        <MenuItem Header="Crear Mesa"/>
+                        <MenuItem Header="Editar Mesa"/>
+                        <MenuItem Header="Eliminar Mesa"/>
+                    </MenuItem>
+                </MenuItem>
+            </Menu>
+        </DockPanel>
     </Grid>
 </Window>
