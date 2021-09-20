@@ -26,10 +26,21 @@ namespace WPF_Restaurant
             InitializeComponent();
         }
 
-        private void mnu_crear_categoria(object sender, RoutedEventArgs e)
+        private void NavigationViewItem_MouseDown(object sender, RoutedEventArgs e)
         {
             Crear_Categoria ctg = new Crear_Categoria();
             ctg.ShowDialog();
+
+        }
+
+        private void mnu_eliminar_categoria(object sender ,RoutedEventArgs e)
+        {
+            Eliminar_Categoria elm = new Eliminar_Categoria();
+            elm.ShowDialog();
+        }
+
+        private void NavigationViewItem_MouseDown(object sender, MouseButtonEventArgs e)
+        {
 
         }
     }

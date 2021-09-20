@@ -12,8 +12,8 @@
 
         <TextBlock HorizontalAlignment="Center" Margin="0,26,0,0" Text="Crear Categoria" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="36"/>
         <Label Content="Nombre" HorizontalAlignment="Left" Margin="67,158,0,0" VerticalAlignment="Top" Height="38" Width="98" FontSize="22"/>
-        <TextBox HorizontalAlignment="Left" Margin="160,165,0,0" Text="Nombre categoria" TextWrapping="Wrap" VerticalAlignment="Top" Width="131" Height="28"/>
-        <TextBox HorizontalAlignment="Left" Margin="426,165,0,0" Text="Descripcion" TextWrapping="Wrap" VerticalAlignment="Top" Width="342" Height="157"/>
+        <TextBox HorizontalAlignment="Left" Margin="160,165,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="131" Height="28" Text="{Binding Crear_Categoria}" x:Name="txtName"/>
+        <TextBox HorizontalAlignment="Left" Margin="426,165,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="342" Height="157" Text="{Binding Crear_Categoria}" x:Name="txtDesc"/>
         <Label Content="Descripcion" HorizontalAlignment="Left" Margin="296,159,0,0" VerticalAlignment="Top" Width="125" FontSize="22"/>
         <Button Content="Crear" HorizontalAlignment="Left" Margin="616,353,0,0" VerticalAlignment="Top" Height="39" Width="115" Click="SP_Crear_Categoria"/>
 

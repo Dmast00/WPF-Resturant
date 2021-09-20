@@ -20,7 +20,7 @@ namespace WPF_Restaurant.Model
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 cmd.CommandType = CommandType.StoredProcedure;
 
-                cmd.Parameters.AddWithValue("@id", categorias.id);
+                
                 cmd.Parameters.AddWithValue("@nombre", categorias.Nombre_Categoria);
                 cmd.Parameters.AddWithValue("@descripcion", categorias.Descripcion_Categoria);
                 conn.Open();
@@ -36,6 +36,40 @@ namespace WPF_Restaurant.Model
                 conn.Close();
             }
             return res;
+        }
+
+        public List<Categorias> GetCategorias()
+        {
+            List<Categorias> lstcat = new List<Categorias>();
+            try
+            {
+                SqlCommand cmd = new SqlCommand("GetCategories", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                conn.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+                Categorias categorias;
+                while (dr.Read())
+                {
+                    categorias = new Categorias();
+                    categorias.id = dr.GetInt32(0);
+                    categorias.Nombre_Categoria = dr.GetString(1);
+                    categorias.Descripcion_Categoria = dr.GetString(2);
+
+                    lstcat.Add(categorias);
+
+
+                }
+                
+            }   
+            catch(Exception ex)
+            {
+
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return (lstcat);
         }
 
     }
