@@ -1,0 +1,22 @@
+﻿<Window x:Class="WPF_Restaurant.Views.Eliminar_Categoria"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_Restaurant.Views"
+        WindowStartupLocation="CenterScreen"
+        mc:Ignorable="d"
+        Title="Eliminar_Categoria" Height="450" Width="800">
+    <Grid>
+        <Grid Margin="36,61,400,30">
+            <Grid.ColumnDefinitions>
+
+            </Grid.ColumnDefinitions>
+            <DataGrid Margin="0,30,0,30" Name="dgcat"/>
+
+
+        </Grid>
+        <Button Content="Eliminar" HorizontalAlignment="Left" Margin="519,296,0,0" VerticalAlignment="Top" Height="57" Width="147"/>
+
+    </Grid>
+</Window>

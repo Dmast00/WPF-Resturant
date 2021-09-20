@@ -3,39 +3,49 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:WPF_Restaurant"
+        xmlns:local="clr-namespace:WPF_Restaurant" xmlns:ui="http://schemas.modernwpf.com/2019"
         WindowState="Maximized"
         
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <DockPanel>
-            <Menu DockPanel.Dock="Top">
-                <MenuItem Header="Sistema">
-                    <MenuItem Header="Restaurante">
-                        <MenuItem Header="Restaurante"/>
-                    </MenuItem>
-                    <MenuItem Header="Inicar Sesion"/>
-                    <MenuItem Header="Salir"/>
-                </MenuItem>
-                <MenuItem Header="Catalogos">
-                    <MenuItem Header="Categorias">
-                        <MenuItem Header="Crear Categoria" Click="mnu_crear_categoria"/>
-                        <MenuItem Header="Editar Categoria"/>
-                        <MenuItem Header="Eliminar Categoria"/>
-                    </MenuItem>
-                    <MenuItem Header="Areas">
-                        <MenuItem Header="Cear Area"/>
-                        <MenuItem Header="Editar Area"/>
-                        <MenuItem Header="Eliminar Area"/>
-                    </MenuItem>
-                    <MenuItem Header="Mesas">
-                        <MenuItem Header="Crear Mesa"/>
-                        <MenuItem Header="Editar Mesa"/>
-                        <MenuItem Header="Eliminar Mesa"/>
-                    </MenuItem>
-                </MenuItem>
-            </Menu>
-        </DockPanel>
+        <ui:NavigationView PaneDisplayMode="Top">
+            <ui:NavigationView.MenuItems>
+                <ui:NavigationViewItem Content="Sistema">
+                    <ui:NavigationViewItem.MenuItems>
+                        <ui:NavigationViewItem Content="Restaurante"/>
+                        <ui:NavigationViewItem Content="Iniciar Sesion"/>
+                        <ui:NavigationViewItem Content="Salir"/>
+                    </ui:NavigationViewItem.MenuItems>
+                </ui:NavigationViewItem>
+                <ui:NavigationViewItem Content="Catalogos">
+                    <ui:NavigationViewItem.MenuItems>
+                        <ui:NavigationViewItem Content="Categorias">
+                            <ui:NavigationViewItem.MenuItems>
+                                <ui:NavigationViewItem Content="Agregar Categoria" GotMouseCapture="NavigationViewItem_MouseDown"/>
+                                <ui:NavigationViewItem Content="Editar Categoria"/>
+                                <ui:NavigationViewItem Content="Eliminar Categoria" GotMouseCapture="mnu_eliminar_categoria"/>
+                            </ui:NavigationViewItem.MenuItems>
+                        </ui:NavigationViewItem>
+                        <ui:NavigationViewItem Content="Areas">
+                            <ui:NavigationViewItem.MenuItems>
+                                <ui:NavigationViewItem Content="Agregar Area"/>
+                                <ui:NavigationViewItem Content="Editar Area"/>
+                                <ui:NavigationViewItem Content="Eliminar Areea"/>
+                            </ui:NavigationViewItem.MenuItems>
+                        </ui:NavigationViewItem>
+                        <ui:NavigationViewItem Content="Mesas">
+                            <ui:NavigationViewItem.MenuItems>
+                                <ui:NavigationViewItem Content="Agregar Mesa"/>
+                                <ui:NavigationViewItem Content="Editar Mesa"/>
+                                <ui:NavigationViewItem Content="Eliminar Mesa"/>
+                            </ui:NavigationViewItem.MenuItems>
+                        </ui:NavigationViewItem>
+                    </ui:NavigationViewItem.MenuItems>
+        
+                </ui:NavigationViewItem>
+                
+            </ui:NavigationView.MenuItems>
+        </ui:NavigationView>
     </Grid>
 </Window>
