@@ -28,6 +28,12 @@ namespace WPF_Restaurant.Views
             
             
         }
+        public async void SP_Eliminar_Categoria(object sender , RoutedEventArgs e,int? id)
+        {
+            
+            var temp = this.dgcat.SelectedItem;
+            
 
+        }
     }
 }
