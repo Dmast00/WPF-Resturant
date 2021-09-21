@@ -12,11 +12,11 @@
             <Grid.ColumnDefinitions>
 
             </Grid.ColumnDefinitions>
-            <DataGrid Margin="0,30,0,30" Name="dgcat"/>
+            <DataGrid Margin="0,30,0,30" Name="dgcat" />
 
 
         </Grid>
-        <Button Content="Eliminar" HorizontalAlignment="Left" Margin="519,296,0,0" VerticalAlignment="Top" Height="57" Width="147"/>
+        <Button Content="Eliminar" HorizontalAlignment="Left" Margin="519,296,0,0" VerticalAlignment="Top" Height="57" Width="147" Click="SP_Eliminar_Categoria"/>
 
     </Grid>
 </Window>

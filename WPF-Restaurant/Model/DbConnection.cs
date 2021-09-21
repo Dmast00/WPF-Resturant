@@ -37,6 +37,32 @@ namespace WPF_Restaurant.Model
             }
             return res;
         }
+        public int Delete_Categoria(Categorias categorias)
+        {
+            int res = 1;
+            try
+            {
+                string sql = "DeleteCategoria";
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@id", categorias.id);
+                cmd.Parameters.AddWithValue("@nombre", categorias.Nombre_Categoria);
+                cmd.Parameters.AddWithValue("@descripcion", categorias.Descripcion_Categoria);
+                conn.Open();
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                res = 1;
+            }
+            finally
+            {
+                res = 1;
+                conn.Close();
+            }
+            return res;
+        }
 
         public List<Categorias> GetCategorias()
         {
